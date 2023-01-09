@@ -1,11 +1,11 @@
 name: Run Unit Tests and Lint
 on : pull_request
-defaults:
-  run:
-    working-directory: subfolders
 jobs:
   unit_test-lint:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: subfolders
     steps:
       - uses: actions/checkout@v2
       - run: |
