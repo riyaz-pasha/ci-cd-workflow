@@ -18,9 +18,9 @@ jobs:
           cache-dependency-path: subfloders/package-lock.json
 
       - name: Install
-        run: npm install
+        run: npm ci
 
       # - run: ls
       # - run: pwd
-      - run: npm install
-      - run: npm run test
+      - name: Running Tests
+        run: npm run test
