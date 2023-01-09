@@ -3,10 +3,23 @@ on : pull_request
 jobs:
   unit_test-lint:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: subfloders
     steps:
-      - uses: actions/checkout@v2
-      - run: ls
-      - run: pwd
-      - run: cd ./subfloders
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      # - run: ls
+      # - run: pwd
       - run: npm install
       - run: npm run test
