@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: subfolders
+        working-directory: ./subfolders
     steps:
       - uses: actions/checkout@v2
       - run: |
