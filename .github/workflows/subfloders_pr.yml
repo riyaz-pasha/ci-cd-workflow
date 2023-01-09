@@ -8,5 +8,5 @@ jobs:
       - run: ls
       - run: pwd
       - run: cd ./subfloders
-      - run: npm ci
+      - run: npm install
       - run: npm run test
