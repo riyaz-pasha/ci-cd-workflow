@@ -3,11 +3,8 @@ on : pull_request
 jobs:
   unit_test-lint:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ../subfloders
     steps:
       - uses: actions/checkout@v2
-      - run: |
-              npm ci
-              npm run test
+      - run: cd subfolders
+      - run: npm ci
+      - run: npm run test
