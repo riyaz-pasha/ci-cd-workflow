@@ -1,11 +1,11 @@
 name: Run Unit Tests and Lint
 on : pull_request
+defaults:
+  run:
+    working-directory: subfloders
 jobs:
   unit_test-lint:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: subfloders
     steps:
       - name: Checkout
         uses: actions/checkout@v3
