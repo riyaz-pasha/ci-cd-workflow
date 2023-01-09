@@ -4,15 +4,15 @@ env:
 on : 
   pull_request:
     paths:
-      - '$APP_PATH/**'
+      - "${{env.APP_PATH}}/**"
   push:
     paths:
-      - '$APP_PATH/**'
+      - "${{env.APP_PATH}}/**"
     branches:
       - main
 defaults:
   run:
-    working-directory: $APP_PATH
+    working-directory: ${{env.APP_PATH}}
 jobs:
   unit_test-lint:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 16.13.x
           cache: npm
-          cache-dependency-path: $APP_PATH/package-lock.json
+          cache-dependency-path: ${{env.APP_PATH}}/package-lock.json
 
       - name: Install
         run: npm ci
