@@ -15,6 +15,7 @@ jobs:
         with:
           node-version: 16.13.x
           cache: npm
+          cache-dependency-path: subfloders/package-lock.json
 
       - name: Install
         run: npm install
