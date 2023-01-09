@@ -4,6 +4,8 @@ on :
     paths:
       - 'subfloders/**'
   push:
+    paths:
+      - 'subfloders/**'
     branches:
       - main
 defaults:
