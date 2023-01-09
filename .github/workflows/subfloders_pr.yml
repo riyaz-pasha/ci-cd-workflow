@@ -7,6 +7,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: ls
       - run: pwd
-      - run: cd ./subfolders
+      - run: cd ./subfloders
       - run: npm ci
       - run: npm run test
