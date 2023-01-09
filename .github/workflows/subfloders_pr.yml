@@ -1,5 +1,8 @@
 name: Run Unit Tests and Lint
-on : pull_request
+on : 
+  pull_request:
+    paths:
+      - 'subfloders/**'
 defaults:
   run:
     working-directory: subfloders
