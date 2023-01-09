@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd subfolders
+      - run: ls
+      - run: pwd
+      - run: cd ./subfolders
       - run: npm ci
       - run: npm run test
